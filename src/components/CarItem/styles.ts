@@ -24,11 +24,21 @@ export const carItemStyles = StyleSheet.create({
         fontWeight: '600',
         color: 'gray'
     },
+    subtitleCTA: {
+        textDecorationLine: 'underline'
+
+    },
     image: {
         width: '100%',
         height: '100%',
         resizeMode: 'cover',
         position: 'absolute'
+    },
+    buttonContainer: {
+        width: '100%',
+        position: 'absolute',
+        bottom: 50,
+
     }
 
 });

@@ -1,19 +1,30 @@
 import React from "react"
-import { View, ImageBackground, Text } from "react-native"
+import { View, ImageBackground, Text, StyleSheet } from "react-native"
 import { StyledButton } from "../StyledButton/StyledButton"
 import { carItemStyles } from './styles'
 
-const CarItem: React.FC = () => {
+
+
+const CarItem: React.FC = (props:any) => {
+
+  const {name, tagline, taglineCTA, image} = props;
+
   return (
     <View style={carItemStyles.carContainer}>
       <ImageBackground
-        source={require('../../assets/images/ModelX.jpeg')}
+        source={image}
         style={carItemStyles.image}
       />
       <View style={carItemStyles.titlesContainer}>
-        <Text style={carItemStyles.title}>{'Model S'}</Text>
-        <Text style={carItemStyles.subtitle}>{'Starting at $55,670'}</Text>
+        <Text style={carItemStyles.title}>{name}</Text>
+        <Text style={carItemStyles.subtitle}>
+          {tagline}
+        <Text style={carItemStyles.subtitleCTA}>
+          {taglineCTA}
+          </Text>
+        </Text>
       </View>
+      <View style={carItemStyles.buttonContainer}>
       <StyledButton
         type={'primary'}
         content={'Custom Order'}
@@ -24,6 +35,7 @@ const CarItem: React.FC = () => {
         content={'Existing Inventory'}
         onPress={() => { console.warn('Existing Inventory button clicked') }}
       />
+      </View>
     </View>
   )
 }
