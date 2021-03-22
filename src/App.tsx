@@ -3,19 +3,14 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
-import CarItem from './components/CarItem/CarItem';
+import { CarsList } from './components/CarsList';
 
 const App: React.FC = () => {
 
 
   return (
     <View style={styles.container}>
-      <CarItem 
-        name={'Model 3'}
-        tagline={'Order Online for '}
-        taglineCTA={'Touchless Delivery'}
-        image={require('./assets/images/Model3.jpeg')}
-      />
+      <CarsList />
     </View>
   );
 };

@@ -3,7 +3,7 @@ import { Pressable, Text, View, } from "react-native"
 import { buttonStyles } from "./styles"
 
 
-export const StyledButton = (props: any) => {
+const StyledButton = (props: any) => {
 
     const {
         type,
@@ -28,3 +28,5 @@ export const StyledButton = (props: any) => {
         </View>
     )
 };
+
+export default React.memo(StyledButton)
