@@ -7,7 +7,7 @@ export const carItemStyles = StyleSheet.create({
         justifyContent: 'center'
     },
     carContainer: {
-        width: Dimensions.get("window").width,
+        width: '100%',
         height: Dimensions.get("window").height,
     },
     titlesContainer: {

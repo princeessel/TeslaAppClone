@@ -4,10 +4,12 @@ import { StyledButton } from "../StyledButton";
 import { carItemStyles } from "./styles"
 
 
+interface IProps {
+  car: any
+}
+const CarItem: React.FC<IProps> = ({ car }) => {
 
-const CarItem: React.FC = (props: any) => {
-
-  const { name, tagline, taglineCTA, image } = props.car;
+  const { name, tagline, taglineCTA, image } = car;
 
   return (
     <View style={carItemStyles.carContainer}>
