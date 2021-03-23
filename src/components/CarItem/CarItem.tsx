@@ -1,15 +1,27 @@
 import React from "react"
 import { View, ImageBackground, Text } from "react-native"
+import { TCar } from "../../types/car";
 import { StyledButton } from "../StyledButton";
 import { carItemStyles } from "./styles"
 
+// type TCar = {
+//   name: string
+//   tagline: string
+//   taglineCTA: string
+//   image: any
+// }
 
-interface IProps {
-  car: any
+export interface IProps {
+  car: TCar
 }
+
 const CarItem: React.FC<IProps> = ({ car }) => {
 
-  const { name, tagline, taglineCTA, image } = car;
+  const {
+    name,
+    tagline,
+    taglineCTA,
+    image } = car;
 
   return (
     <View style={carItemStyles.carContainer}>

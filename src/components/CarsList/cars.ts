@@ -1,4 +1,4 @@
-export default [{
+export const cars =[{
   name: 'Model S',
   tagline: 'Starting at $69,420',
   image: require('../../assets/images/ModelS.jpeg'),
